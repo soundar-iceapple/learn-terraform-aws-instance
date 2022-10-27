@@ -16,9 +16,9 @@ provider "aws" {
 
 resource "aws_instance" "app_server" {
   ami = "ami-0e6329e222e662a52"
-  instance_type = "t2.micro"
+  instance_type = "t2.nano"
 
   tags = {
-    "Name" = "TerraformSampleEC2Insance"
+    "Name" = var.instance_name
   }
 }
